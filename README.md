@@ -27,12 +27,11 @@ A simple, locally running web application built with Node.js and Express to faci
 
 ## Setup and Installation
 
-1.  **Get Project Files:** Ensure you have the project files (`server.js`, and the `public` folder containing `index.html`, `style.css`, `app.js`). Place `server.js` and the `public` folder together in a main project directory.
-2.  **Navigate to Directory:** Open your terminal or command prompt and change into the project's root directory (the folder containing `server.js` and the `public` folder).
+1.  **Navigate to Directory:** Open your terminal or command prompt and change into the project's root directory (the folder containing `server.js` and the `public` folder).
     ```bash
     cd path/to/your/firestore-web-uploader
     ```
-3.  **Install Dependencies:** Run the following command to install the required Node.js packages:
+2.  **Install Dependencies:** Run the following command to install the required Node.js packages:
     ```bash
     npm install
     ```
