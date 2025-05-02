@@ -7,8 +7,6 @@ A simple, locally running web application built with Node.js and Express to faci
 *   Provides a web interface accessible via `localhost`.
 *   Allows selecting or dragging & dropping the Firebase Service Account Key JSON file.
 *   Allows selecting or dragging & dropping multiple JSON data files.
-*   Optionally specify a target Firestore collection name for all selected data files.
-*   If no collection name is specified, uses the filename (without extension) as the collection name for each respective file.
 *   Uses the Firebase Admin SDK for secure backend operations.
 *   Provides real-time status logging in the web interface.
 
@@ -60,21 +58,17 @@ A simple, locally running web application built with Node.js and Express to faci
     *   Drag and drop one or more JSON data files (containing arrays of objects with `id` fields) onto the second drop zone ("2. Data Files").
     *   Alternatively, click the file input below the drop zone to select multiple data files.
     *   The "Selected Files" list will update.
-3.  **(Optional) Specify Target Collection:**
-    *   If you want **all** selected files to be uploaded to the **same** Firestore collection, enter the desired collection name (e.g., `exercises`, `products`) in the "Target Firestore Collection" input field.
-    *   If you leave this field **blank**, the uploader will use the filename (without the `.json` extension) as the collection name for *each individual file*. For example, `muscles.json` will upload to the `muscles` collection, and `chest_exercises.json` will upload to the `chest_exercises` collection.
-4.  **Upload:**
+3.  **Upload:**
     *   Once a service account key and at least one data file are selected, the "Initialize & Upload" button will become active.
     *   Click the button.
-5.  **Monitor Logs:**
+4.  **Monitor Logs:**
     *   Watch the "Status Log" section in the web app for real-time progress updates and any success/error messages.
     *   You can also check the terminal where `node server.js` is running for more detailed server-side logs.
-6.  **Verify in Firestore:** After the process completes, check your Firestore database in the Firebase Console to confirm that the collections and documents have been created/updated as expected.
+5.  **Verify in Firestore:** After the process completes, check your Firestore database in the Firebase Console to confirm that the documents have been created/updated as expected.
 
 ## Important Notes
 
-*   **Document Overwrites:** The script uses the `id` from your JSON object as the Firestore Document ID. If a document with that specific ID already exists in the target collection, **it will be completely overwritten** with the data from your JSON file.
-*   **Collection Creation:** If the target collection (either specified or derived from the filename) does not exist in Firestore, it will be created automatically when the first document is written.
+*   **Document Overwrites:** The script uses the `id` from your JSON object as the Firestore Document ID. If a document with that specific ID already exists in the target, **it will be completely overwritten** with the data from your JSON file.
 *   **Batching:** The script uploads data in batches (default size 450 documents) to stay within Firestore limits.
 
 ## Security Warning!
