@@ -1,6 +1,6 @@
 # Firestore Web Uploader
 
-A simple, locally running web application built with Node.js and Express to facilitate uploading JSON data arrays to specific Firestore collections using the Firebase Admin SDK. Ideal for seeding initial data or performing bulk uploads during development.
+A simple, locally running web application built with Node.js and Express to facilitate uploading JSON data arrays to Firestore using the Firebase Admin SDK. Ideal for seeding initial data or performing bulk uploads during development.
 
 ## Features
 
