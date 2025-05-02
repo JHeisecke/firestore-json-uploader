@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firestore Uploader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Firestore Data Uploader</h1>
+
+        <div class="section">
+            <h2>1. Service Account Key</h2>
+            <div id="key-drop-zone" class="drop-zone">
+                <p>Drag & Drop Service Account Key JSON file here, or</p>
+                <input type="file" id="key-input" accept=".json">
+                <p id="key-status" class="status">No key selected.</p>
+            </div>
+        </div>
+            
+        <div class="section">
+            <h2>2. Data Files (JSON Arrays)</h2>
+            <div>
+                <label for="collection-name">Target Firestore Collection:</label>
+                <input type="text" id="collection-name" placeholder="e.g., exercises">
+            </div>
+            <div id="data-drop-zone" class="drop-zone" style="margin-top: 10px;">
+                <p>Drag & Drop JSON data files here, or</p>
+                <input type="file" id="data-input" accept=".json" multiple>
+                <p>Selected Files:</p>
+                <ul id="data-files-list">
+                    <li>None</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <button id="upload-button" disabled>Initialize & Upload</button>
+        </div>
+    <div class="section">
+        <h2>Status Log</h2>
+        <pre id="status-log"></pre>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

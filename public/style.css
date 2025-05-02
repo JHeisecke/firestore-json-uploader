@@ -1,0 +1,92 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.drop-zone {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    background-color: #fafafa;
+    border-radius: 5px;
+}
+
+.drop-zone.dragover {
+    border-color: #007bff;
+    background-color: #e9f5ff;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+#data-files-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 10px;
+}
+
+#data-files-list li {
+    background-color: #e9ecef;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+
+.status {
+    font-weight: bold;
+    margin-top: 10px;
+}
+#key-status.loaded {
+    color: green;
+}
+#key-status.error {
+    color: red;
+}
+
+pre#status-log {
+    background-color: #333;
+    color: #f4f4f4;
+    padding: 15px;
+    border-radius: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+    white-space: pre-wrap; /* Allow wrapping */
+    word-wrap: break-word; /* Break long words */
+}
