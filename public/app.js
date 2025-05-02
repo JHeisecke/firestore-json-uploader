@@ -76,6 +76,8 @@ function setupDropZone(zone, fileHandler, isMultiple = false) {
         zone.classList.remove('dragover');
         const files = Array.from(e.dataTransfer.files);
         fileHandler(files, isMultiple);
+        // Update button state after handling drop
+        updateButtonState();
     });
 }
 

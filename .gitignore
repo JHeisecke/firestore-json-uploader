@@ -134,5 +134,5 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-./public/uploads
 .DS_Store
+public/uploads/
